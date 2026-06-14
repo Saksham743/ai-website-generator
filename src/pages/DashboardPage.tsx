@@ -1,12 +1,14 @@
 import { useState } from "react";
 import Sidebar from "@/components/dashboard/Sidebar";
 import Workspace from "@/components/dashboard/Workspace";
+import type { GeneratedFile } from "@/lib/api";
 
 export type Project = {
   id: string;
   name: string;
   prompt: string;
-  code: string;
+  files: GeneratedFile[];
+  entry: string;
   createdAt: Date;
 };
 
