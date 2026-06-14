@@ -3,30 +3,26 @@
 
 default:
   image: node:22
+  cache:
+    key:
+      files:
+        - package-lock.json
+    paths:
+      - .npm/
+  before_script:
+    - npm ci --cache .npm --prefer-offline
 
 stages:
   - verify
 
-cache:
-  key:
-    files:
-      - package-lock.json
-  paths:
-    - .npm/
-
-.install: &install
-  - npm ci --cache .npm --prefer-offline
-
 typecheck:
   stage: verify
   script:
-    - *install
     - npx tsc --noEmit
 
 build:
   stage: verify
   script:
-    - *install
     - npm run build
   artifacts:
     paths:
