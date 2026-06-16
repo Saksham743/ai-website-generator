@@ -4,9 +4,13 @@
 
 ## Getting started
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
-
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+1. Copy the link from the code option at the top of the repo.
+2. Open you terminal and write the command "git clone https://github.com/Saksham743/ai-website-generator.git".
+3. After cloning it run this command "cd ai-website-generator.git".
+4. Then run "npm install".
+5. npm install will download all the required dependencies in your local machine.
+6. Then lastly run "npm run dev".
+7. These all the steps are only worth following if you have already have node installed in your machine otherwise it will not work, so if you don't have node in you machine first go and download it.
 
 ## Add your files
 
